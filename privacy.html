@@ -20,26 +20,27 @@
 <div class="nav"><a href="index.html">← MiRRA Legal</a></div>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: August 23, 2026</p>
+<p class="meta">Last updated: September 7, 2026</p>
 
 <p>MiRRA ("we", "us") is a social discovery app that connects people through shared real-time activities. This policy explains what we collect, why, and what control you have. MiRRA is available to users aged 18 and over only.</p>
 
 <h2>1. Information You Give Us</h2>
 <ul>
   <li><strong>Account details</strong> — name, email address, and authentication identifier provided by Google or Apple when you sign in. We never see or store your Google or Apple password.</li>
-  <li><strong>Date of birth</strong> — used to confirm you are 18 or older.</li>
+  <li><strong>Date of birth</strong> — used to confirm you are 18 or older, and to apply the age range you and other users choose. Your date of birth cannot be changed after sign-up.</li>
   <li><strong>Profile information</strong> — the photo you upload for your avatar, your display name, bio, gender, and country.</li>
   <li><strong>Onboarding responses</strong> — personality type (MBTI) or vibe slider answers, selected interests, and character identity selections. Some of these are private preference signals used for matching and are never displayed on your public profile.</li>
-  <li><strong>Content you post</strong> — activity status, captions, photos, and any place, music, or event details you choose to attach to a post.</li>
+  <li><strong>Content you post</strong> — activity status, captions, photos, and any place or music details you choose to attach to a post.</li>
+  <li><strong>Places you post from</strong> — when you attach a place to a post, we save that place to a private list on your account so it can appear as a shortcut and so you can be notified about meet-ups there. This list is visible only to you, and you can delete any entry from within the app.</li>
   <li><strong>Direct messages</strong> — the content of messages you send to other users.</li>
 </ul>
 
 <h2>2. Information Collected Automatically</h2>
 <ul>
-  <li><strong>Location</strong> — if you grant permission, we may collect your approximate or precise device location to show you nearby activity and to attach a place to your posts. You can decline this permission or revoke it at any time in your device settings; MiRRA remains usable without it. We do not continuously track your location in the background.</li>
-  <li><strong>Device and usage data</strong> — device model, operating system version, app version, crash reports, and general usage patterns, collected through Google Analytics for Firebase and Firebase Crashlytics.</li>
+  <li><strong>Notification token</strong> — a messaging token from Firebase Cloud Messaging so we can deliver the notifications you have enabled. It identifies your app installation, not you personally.</li>
   <li><strong>Timestamps</strong> — when posts, messages, and activity updates are created, so the app can show what is recent.</li>
 </ul>
+<p><strong>We do not collect your location.</strong> MiRRA does not request location permission and does not use GPS or any coordinates. A place attached to a post is text you typed yourself. We also do not use analytics or crash-reporting services, and we do not track you across other apps or websites.</p>
 
 <h2>3. How We Use Your Information</h2>
 <ul>
@@ -50,36 +51,43 @@
   <li>To generate your concealed-face avatar.</li>
   <li>To send notifications you have enabled.</li>
   <li>To detect, investigate, and prevent abuse, harassment, and violations of our Terms.</li>
-  <li>To diagnose crashes and improve app stability.</li>
 </ul>
 
 <h2>4. Your Avatar and Photo Processing</h2>
-<p>MiRRA requires every user to use an avatar in which the face is artistically concealed. This processing happens entirely on your device. Your photo is never uploaded to any third-party image processing service. Only the finished avatar is stored in our Firebase Storage. We do not use your photos to train any machine learning model.</p>
+<p>MiRRA requires every user to use an avatar in which the face is artistically concealed. There are two ways an avatar is produced, and they are different:</p>
+<ul>
+  <li><strong>On-device styles</strong> — most avatar styles are generated entirely on your own phone. Your photo never leaves your device. Only the finished avatar is uploaded to our Firebase Storage.</li>
+  <li><strong>The AI style</strong> — if you choose the AI style, the photo you selected is sent through our server to Google's Gemini image API, which returns the concealed avatar. This is the only case in which your photo leaves your device before being concealed. The returned image is stored in our Firebase Storage in a location separate from your profile picture, and it becomes your avatar only if you confirm it.</li>
+</ul>
+<p>We do not use your photos to train any machine learning model.</p>
 
 <h2>5. Third-Party Services</h2>
 <p>We share data with the following providers strictly to operate the app:</p>
 <ul>
   <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Cloud Functions, Cloud Messaging) — hosts your account, posts, messages, and images. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>.</li>
-  <li><strong>Google Analytics for Firebase and Firebase Crashlytics</strong> — usage analytics and crash reporting.</li>
+  <li><strong>Google Gemini API</strong> — receives a photo you selected, and only when you choose the AI avatar style, in order to return a concealed avatar. See section 4.</li>
+  <li><strong>Apple (iTunes Search API)</strong> — when you type in the "Listening to?" field, the text you type is sent to Apple's public song search so we can offer matching songs. Your account is not identified in that request.</li>
+  <li><strong>Wikimedia (Wikidata)</strong> — when you type in the subject field, the text you type is sent to Wikimedia's public search so we can offer matching topics. Your account is not identified in that request.</li>
 </ul>
 <p>We do not sell your personal information. We do not share your personal information with advertisers.</p>
 
 <h2>6. What Other Users Can See</h2>
 <ul>
-  <li>Your display name, bio, avatar, activity posts, and any place, music, or event context you attach to them.</li>
+  <li>Your display name, bio, avatar, activity posts, and any place or music context you attach to them.</li>
   <li>Your follower and following counts are visible only to you. They are never shown on your profile to anyone else.</li>
   <li>Your private matching preferences and character identity selections are never displayed publicly.</li>
+  <li>Your list of saved places is never shown to anyone else.</li>
   <li>Direct messages are visible only to you and the person you are messaging.</li>
 </ul>
 
 <h2>7. Data Retention</h2>
-<p>We keep your information for as long as your account is active. Posts in the RSVP tab expire automatically after their associated date passes. If you delete your account, we delete your profile, posts, and uploaded images. Messages you have sent may remain visible to their recipients. Backup copies and records required for legal, security, or abuse-prevention purposes may be retained for a limited period after deletion.</p>
+<p>We keep your information for as long as your account is active. If you delete your account, we delete your profile, posts, and uploaded images. Messages you have sent may remain visible to their recipients. Backup copies and records required for legal, security, or abuse-prevention purposes may be retained for a limited period after deletion.</p>
 
 <h2>8. Your Rights and Choices</h2>
 <ul>
-  <li><strong>Access and correction</strong> — you can view and edit your profile information in the app at any time.</li>
+  <li><strong>Access and correction</strong> — you can view and edit your profile information in the app at any time. Date of birth and gender are fixed after sign-up.</li>
   <li><strong>Deletion</strong> — you can permanently delete your account from Settings. This action cannot be undone.</li>
-  <li><strong>Location</strong> — you can grant or revoke location permission in your device settings.</li>
+  <li><strong>Saved places</strong> — you can delete any saved place from within the app.</li>
   <li><strong>Notifications</strong> — you can turn off notifications in the app or your device settings.</li>
   <li><strong>Blocking</strong> — you can block any user, which prevents them from seeing your posts or contacting you.</li>
 </ul>
@@ -98,7 +106,7 @@
 <p>We may update this policy as the app develops. We will revise the date at the top and, for significant changes, notify you within the app.</p>
 
 <h2>13. Contact</h2>
-<p>Questions about this policy or your data: <a href="mailto:MiRRAsr@gmail.com">MiRRAsr@gmail.com</a></p>
+<p>Questions about this policy or your data: <a href="mailto:jynxsr@gmail.com">jynxsr@gmail.com</a></p>
 
 </body>
 </html>
