@@ -20,7 +20,7 @@
 <div class="nav"><a href="index.html">← MiRRA Legal</a></div>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: September 14, 2026</p>
+<p class="meta">Last updated: September 23, 2026</p>
 
 <p>MiRRA ("we", "us") is a social discovery app that connects people through shared real-time activities. This policy explains what we collect, why, and what control you have. MiRRA is available to users aged 18 and over only.</p>
 
@@ -28,7 +28,7 @@
 <ul>
   <li><strong>Account details</strong> — name, email address, and authentication identifier provided by Google or Apple when you sign in. We never see or store your Google or Apple password.</li>
   <li><strong>Date of birth</strong> — used to confirm you are 18 or older, and to apply the age range you and other users choose. Your date of birth cannot be changed after sign-up.</li>
-  <li><strong>Profile information</strong> — the photo you upload for your avatar, your display name, bio, gender, and country.</li>
+  <li><strong>Profile information</strong> — the photo you upload for your avatar, your display name, bio, gender, country, and the languages you speak.</li>
   <li><strong>Onboarding responses</strong> — personality type (MBTI) or vibe slider answers, selected interests, character identity selections, and anything you write in the optional "What are you looking for?" box. Some of these are private preference signals used for matching and are never displayed on your public profile.</li>
   <li><strong>Content you post</strong> — activity status, captions, photos, and any place or music details you choose to attach to a post.</li>
   <li><strong>Places you post from</strong> — when you attach a place to a post, we save that place to a private list on your account so it can appear as a shortcut and so you can be notified about meet-ups there. This list is visible only to you, and you can delete any entry from within the app.</li>
@@ -38,6 +38,7 @@
 <h2>2. Information Collected Automatically</h2>
 <ul>
   <li><strong>Notification token</strong> — a messaging token from Firebase Cloud Messaging so we can deliver the notifications you have enabled. It identifies your app installation, not you personally.</li>
+  <li><strong>Device identifier</strong> — a scrambled (one-way hashed) form of your device's ID. It is used only to stop an account that was banned for breaking our Terms from signing up again on the same device.</li>
   <li><strong>Timestamps</strong> — when posts, messages, and activity updates are created, so the app can show what is recent.</li>
 </ul>
 <p><strong>We do not collect your location.</strong> MiRRA does not request location permission and does not use GPS or any coordinates. A place attached to a post is text you typed yourself. We also do not use analytics or crash-reporting services, and we do not track you across other apps or websites.</p>
@@ -50,6 +51,8 @@
   <li>To deliver direct messages between users.</li>
   <li>To generate your concealed-face avatar.</li>
   <li>To send notifications you have enabled.</li>
+  <li>To check at sign-up that you are a real person who matches your photo and your stated age (see section 5).</li>
+  <li>To automatically screen uploaded photos for sexual or violent content, and to hide posts that several people have reported until we review them.</li>
   <li>To detect, investigate, and prevent abuse, harassment, and violations of our Terms.</li>
   <li>To improve MiRRA — we read what people write in the optional "What are you looking for?" box to understand what users want and decide what to build next.</li>
 </ul>
@@ -57,22 +60,28 @@
 <h2>4. Your Avatar and Photo Processing</h2>
 <p>MiRRA requires every user to use an avatar in which the face is artistically concealed. There are two ways an avatar is produced, and they are different:</p>
 <ul>
-  <li><strong>On-device styles</strong> — most avatar styles are generated entirely on your own phone. Your photo never leaves your device. Only the finished avatar is uploaded to our Firebase Storage.</li>
+  <li><strong>On-device styles</strong> — most avatar styles are generated entirely on your own phone, and only the finished avatar is uploaded to our Firebase Storage. Before that, a reduced copy of the photo you picked is sent to Google Cloud Vision to check that it is a real photo of a person rather than a drawing or a picture copied from the internet. That copy is used only for the check and is not stored.</li>
   <li><strong>The AI style</strong> — if you choose the AI style, the photo you selected is sent through our server to Google's Gemini image API, which returns the concealed avatar. This is the only case in which your photo leaves your device before being concealed. The returned image is stored in our Firebase Storage in a location separate from your profile picture, and it becomes your avatar only if you confirm it.</li>
 </ul>
 <p>We do not use your photos to train any machine learning model.</p>
 
-<h2>5. Third-Party Services</h2>
+<h2>5. Selfie Check at Sign-Up</h2>
+<p>To keep MiRRA safe, the last step of sign-up asks for two quick selfies (one looking straight, one with your head turned). They are sent to our face-checking service, Amazon Rekognition, which estimates an age range and checks that both selfies and the photo you used for your avatar show the same person. They are used only for this check and are deleted right away: they are removed from your phone, never stored by us, and Amazon does not keep them to train its services. We keep only the result (passed, or needs review). The selfies are never shown on your profile or to other users. If the check suggests an account may not be genuine, the account may be limited until we review it.</p>
+
+<h2>6. Third-Party Services</h2>
 <p>We share data with the following providers strictly to operate the app:</p>
 <ul>
   <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Cloud Functions, Cloud Messaging) — hosts your account, posts, messages, and images. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>.</li>
   <li><strong>Google Gemini API</strong> — receives a photo you selected, and only when you choose the AI avatar style, in order to return a concealed avatar. See section 4.</li>
-  <li><strong>Apple (iTunes Search API)</strong> — when you type in the "Listening to?" field, the text you type is sent to Apple's public song search so we can offer matching songs. Your account is not identified in that request.</li>
+  <li><strong>Google Cloud Vision</strong> — checks the photo you pick for your avatar (section 4) and screens photos you upload for sexual or violent content.</li>
+  <li><strong>Amazon Web Services (Rekognition)</strong> — receives your sign-up selfies and avatar photo for the one-time check described in section 5. Nothing is kept.</li>
+  <li><strong>Spotify</strong> — when you type in the "Listening to?" field, the text you type is sent through our server to Spotify's public song search. Your account is not identified in that request.</li>
+  <li><strong>Apple (iTunes Search API)</strong> — used as a backup song search, and to play short song previews. The text you type or the song you pick is sent to Apple's public search. Your account is not identified in that request.</li>
   <li><strong>Wikimedia (Wikidata)</strong> — when you type in the subject field, the text you type is sent to Wikimedia's public search so we can offer matching topics. Your account is not identified in that request.</li>
 </ul>
 <p>We do not sell your personal information. We do not share your personal information with advertisers.</p>
 
-<h2>6. What Other Users Can See</h2>
+<h2>7. What Other Users Can See</h2>
 <ul>
   <li>Your display name, bio, avatar, activity posts, and any place or music context you attach to them.</li>
   <li>Your follower and following counts are visible only to you. They are never shown on your profile to anyone else.</li>
@@ -81,10 +90,10 @@
   <li>Direct messages are visible only to you and the person you are messaging.</li>
 </ul>
 
-<h2>7. Data Retention</h2>
-<p>We keep your information for as long as your account is active. If you delete your account, we delete your profile, posts, and uploaded images. Messages you have sent may remain visible to their recipients. Backup copies and records required for legal, security, or abuse-prevention purposes may be retained for a limited period after deletion.</p>
+<h2>8. Data Retention</h2>
+<p>We keep your information for as long as your account is active. Sign-up selfies are never kept; only the check result is, for as long as your account exists. If you delete your account, we delete your profile, posts, and uploaded images. Messages you have sent may remain visible to their recipients. Backup copies and records required for legal, security, or abuse-prevention purposes may be retained for a limited period after deletion.</p>
 
-<h2>8. Your Rights and Choices</h2>
+<h2>9. Your Rights and Choices</h2>
 <ul>
   <li><strong>Access and correction</strong> — you can view and edit your profile information in the app at any time. Date of birth and gender are fixed after sign-up.</li>
   <li><strong>Deletion</strong> — you can permanently delete your account from Settings. This action cannot be undone.</li>
@@ -94,19 +103,19 @@
 </ul>
 <p>If you are in the European Economic Area or the United Kingdom, you have additional rights under the GDPR, including the right to access, correct, delete, restrict processing of, or port your data, and the right to object to processing. If you are a California resident, you have rights under the CCPA including the right to know what personal information we collect and the right to request its deletion. To exercise any of these rights, contact us at the address below.</p>
 
-<h2>9. International Data Transfers</h2>
+<h2>10. International Data Transfers</h2>
 <p>MiRRA is operated from the Republic of Korea, and our infrastructure is hosted by Google Firebase in the United States. If you use MiRRA from outside these countries, your information will be transferred to and processed in them. We rely on standard contractual clauses and our providers' data protection commitments to safeguard these transfers.</p>
 
-<h2>10. Security</h2>
+<h2>11. Security</h2>
 <p>We use database and storage security rules that restrict access to your data, encryption in transit, and authentication through Google and Apple. Direct messages are readable only by the two participants in a conversation. No system is perfectly secure, and we cannot guarantee absolute security.</p>
 
-<h2>11. Children</h2>
+<h2>12. Children</h2>
 <p>MiRRA is intended for users aged 18 and over. We do not knowingly collect information from anyone under 18. If we learn that we have collected information from a person under 18, we will delete that account and its data. If you believe a minor is using MiRRA, please contact us.</p>
 
-<h2>12. Changes to This Policy</h2>
+<h2>13. Changes to This Policy</h2>
 <p>We may update this policy as the app develops. We will revise the date at the top and, for significant changes, notify you within the app.</p>
 
-<h2>13. Contact</h2>
+<h2>14. Contact</h2>
 <p>Questions about this policy or your data: <a href="mailto:jynxsr@gmail.com">jynxsr@gmail.com</a></p>
 
 </body>
