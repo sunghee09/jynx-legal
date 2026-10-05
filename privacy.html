@@ -20,7 +20,7 @@
 <div class="nav"><a href="index.html">← MiRRA Legal</a></div>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: September 29, 2026</p>
+<p class="meta">Last updated: October 5, 2026</p>
 
 <p>MiRRA ("we", "us") is a social discovery app that connects people through shared real-time activities. This policy explains what we collect, why, and what control you have. MiRRA is available to users aged 18 and over only.</p>
 
@@ -40,8 +40,9 @@
   <li><strong>Notification token</strong> — a messaging token from Firebase Cloud Messaging so we can deliver the notifications you have enabled. It identifies your app installation, not you personally.</li>
   <li><strong>Device identifier</strong> — a scrambled (one-way hashed) form of your device's ID. It is used only to stop an account that was banned for breaking our Terms from signing up again on the same device.</li>
   <li><strong>Timestamps</strong> — when posts, messages, and activity updates are created, so the app can show what is recent.</li>
+  <li><strong>Usage data</strong> — how the app is used, collected with Google Analytics for Firebase: which screens are opened, which sign-up steps are completed, and counts such as posts created, likes, follows, and messages sent, along with basic device information (device model, operating system and app version) and an approximate region that Google works out from your IP address. It never includes your name, what you post or write, your messages, or the places and songs you attach. It is linked to a random identifier for your app installation, not to your account, and we do not use your device's advertising identifier.</li>
 </ul>
-<p><strong>We do not collect your location.</strong> MiRRA does not request location permission and does not use GPS or any coordinates. A place attached to a post is text you typed yourself. We also do not use analytics or crash-reporting services, and we do not track you across other apps or websites.</p>
+<p><strong>We do not collect your precise location.</strong> MiRRA does not request location permission and does not use GPS. A place attached to a post is one you typed or picked from a search yourself. We do not use crash-reporting services, and we do not track you across other apps or websites.</p>
 
 <h2>3. How We Use Your Information</h2>
 <ul>
@@ -51,6 +52,7 @@
   <li>To deliver direct messages between users.</li>
   <li>To generate your concealed-face avatar.</li>
   <li>To send notifications you have enabled.</li>
+  <li>To understand how the app is used — for example, how many people come back and which sign-up steps are confusing — so we can improve it.</li>
   <li>To check at sign-up that you are a real person who matches your photo and your stated age (see section 5).</li>
   <li>To automatically screen uploaded photos for sexual or violent content, and to hide posts that several people have reported until we review them.</li>
   <li>To detect, investigate, and prevent abuse, harassment, and violations of our Terms.</li>
@@ -71,11 +73,13 @@
 <p>We share data with the following providers strictly to operate the app:</p>
 <ul>
   <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Cloud Functions, Cloud Messaging) — hosts your account, posts, messages, and images. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>.</li>
+  <li><strong>Google Analytics for Firebase</strong> — receives the usage data described in section 2. We have switched off Google's options to use this data for its own products, benchmarking, technical support, or account specialists.</li>
   <li><strong>Google Gemini API</strong> — receives a photo you selected, and only when you choose the AI avatar style, in order to return a concealed avatar. See section 4.</li>
   <li><strong>Google Cloud Vision</strong> — checks the photo you pick for your avatar (section 4) and screens photos you upload for sexual or violent content.</li>
   <li><strong>Amazon Web Services (Rekognition)</strong> — receives your sign-up selfies and avatar photo for the one-time check described in section 5. Nothing is kept.</li>
   <li><strong>Spotify</strong> — when you type in the "Listening to?" field, the text you type is sent through our server to Spotify's public song search. Your account is not identified in that request.</li>
   <li><strong>Apple (iTunes Search API)</strong> — used as a backup song search, and to play short song previews. The text you type or the song you pick is sent to Apple's public search. Your account is not identified in that request.</li>
+  <li><strong>OpenStreetMap search (Photon, run by komoot, and Nominatim, run by the OpenStreetMap Foundation)</strong> — when you type in the "Where?" field, the text you type is sent to find matching places, and when you pick a place, its map position is sent once to find its neighbourhood. Your account is not identified in those requests.</li>
   <li><strong>Wikimedia (Wikidata)</strong> — when you type in the subject field, the text you type is sent to Wikimedia's public search so we can offer matching topics. Your account is not identified in that request.</li>
 </ul>
 <p>We do not sell your personal information. We do not share your personal information with advertisers.</p>
