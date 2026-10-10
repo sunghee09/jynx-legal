@@ -43,7 +43,12 @@
   <li><strong>Timestamps</strong> — when posts, messages, and activity updates are created, so the app can show what is recent.</li>
   <li><strong>Usage data</strong> — how the app is used, collected with Google Analytics for Firebase: which screens are opened, which sign-up steps are completed, and counts such as posts created, likes, follows, and messages sent, along with basic device information (device model, operating system and app version) and an approximate region that Google works out from your IP address. It never includes your name, what you post or write, your messages, or the places and songs you attach. It is linked to a random identifier for your app installation, not to your account, and we do not use your device's advertising identifier.</li>
 </ul>
-<p><strong>We do not collect your precise location.</strong> MiRRA does not request location permission and does not use GPS. A place attached to a post is one you typed or picked from a search yourself. We do not use crash-reporting services, and we do not track you across other apps or websites.</p>
+<p><strong>Your location is used only when you ask for it, and we never store it.</strong> Location access is optional, and MiRRA works without it. If you allow it, the app reads your phone's position in two situations only:</p>
+<ul>
+  <li><strong>While you fill in the "Where?" field of a post</strong> — to list the places nearest you and to sort place searches by nearness. Your position is sent with that request to the OpenStreetMap search described in section 6.</li>
+  <li><strong>When you tap "I'm open" on a match with someone at the same place</strong> — to confirm that you are at that place right now. Your position is sent to our server for that one comparison.</li>
+</ul>
+<p>In both cases your position is not saved, is not shown to other users, and is not used to show you who is nearby. MiRRA never reads your location in the background. A place attached to a post is always one you typed or picked yourself. We do not use crash-reporting services, and we do not track you across other apps or websites.</p>
 
 <h2>3. How We Use Your Information</h2>
 <ul>
@@ -81,7 +86,7 @@
   <li><strong>Amazon Web Services (Rekognition)</strong> — receives your sign-up selfies and avatar photo for the one-time check described in section 5. Nothing is kept.</li>
   <li><strong>Spotify</strong> — when you type in the "Listening to?" field, the text you type is sent through our server to Spotify's public song search. Your account is not identified in that request.</li>
   <li><strong>Apple (iTunes Search API)</strong> — used as a backup song search, and to play short song previews. The text you type or the song you pick is sent to Apple's public search. Your account is not identified in that request.</li>
-  <li><strong>OpenStreetMap search (Photon, run by komoot, and Nominatim, run by the OpenStreetMap Foundation)</strong> — when you type in the "Where?" field, the text you type is sent to find matching places, and when you pick a place, its map position is sent once to find its neighbourhood. Your account is not identified in those requests.</li>
+  <li><strong>OpenStreetMap search (Photon, run by komoot, and Nominatim, run by the OpenStreetMap Foundation)</strong> — when you type in the "Where?" field, the text you type is sent to find matching places, and when you pick a place, its map position is sent once to find its neighbourhood. If you have allowed location access, your phone's position is sent with those searches so the nearest places come first. When a private note about wanting company is matched, our server also looks up where the place you picked is (the place's position, not yours). Your account is not identified in those requests.</li>
   <li><strong>Wikimedia (Wikidata)</strong> — when you type in the subject field, the text you type is sent to Wikimedia's public search so we can offer matching topics. Your account is not identified in that request.</li>
 </ul>
 <p>We do not sell your personal information. We do not share your personal information with advertisers.</p>
