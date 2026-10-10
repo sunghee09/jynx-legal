@@ -20,7 +20,7 @@
 <div class="nav"><a href="index.html">← MiRRA Legal</a></div>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 5, 2026</p>
+<p class="meta">Last updated: October 10, 2026</p>
 
 <p>MiRRA ("we", "us") is a social discovery app that connects people through shared real-time activities. This policy explains what we collect, why, and what control you have. MiRRA is available to users aged 18 and over only.</p>
 
@@ -31,6 +31,7 @@
   <li><strong>Profile information</strong> — the photo you upload for your avatar, your display name, bio, gender, country, and the languages you speak.</li>
   <li><strong>Onboarding responses</strong> — personality type (MBTI) or vibe slider answers, selected interests, and character identity selections. Some of these are private preference signals used for matching and are never displayed on your public profile.</li>
   <li><strong>Content you post</strong> — activity status, captions, photos, and any place or music details you choose to attach to a post.</li>
+  <li><strong>Private notes on a post</strong> — a short note you can choose to add to a post. It is never shown to other users. We store it with your post, and to check whether someone else wrote something similar around the same time, its text is sent through our server to Google's Gemini API, which sorts it by theme (for example a feeling, or wanting company) and may compare it with another person's note. If your note matches someone else's, you each see a card saying that someone wrote something similar — and, for a note about wanting company, that they are at the same place you picked for your post. Neither of you is named, and neither of you sees the other's words, unless you both choose to connect; then you each see the other's name. A note can say sensitive things about you, so add one only if you are comfortable with it being processed this way.</li>
   <li><strong>Places you post from</strong> — when you attach a place to a post, we save that place to a private list on your account so it can appear as a shortcut and so you can be notified about meet-ups there. This list is visible only to you, and you can delete any entry from within the app.</li>
   <li><strong>Direct messages</strong> — the content of messages you send to other users.</li>
 </ul>
@@ -50,6 +51,7 @@
   <li>To show your posts to other users and show you theirs.</li>
   <li>To match you with people doing similar activities or sharing interests.</li>
   <li>To deliver direct messages between users.</li>
+  <li>To quietly match a private note you added to a post with a similar note from another user, and to introduce you only if you both choose to connect.</li>
   <li>To generate your concealed-face avatar.</li>
   <li>To send notifications you have enabled.</li>
   <li>To understand how the app is used — for example, how many people come back and which sign-up steps are confusing — so we can improve it.</li>
@@ -74,7 +76,7 @@
 <ul>
   <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Cloud Functions, Cloud Messaging) — hosts your account, posts, messages, and images. See <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a>.</li>
   <li><strong>Google Analytics for Firebase</strong> — receives the usage data described in section 2. We have switched off Google's options to use this data for its own products, benchmarking, technical support, or account specialists.</li>
-  <li><strong>Google Gemini API</strong> — receives a photo you selected, and only when you choose the AI avatar style, in order to return a concealed avatar. See section 4.</li>
+  <li><strong>Google Gemini API</strong> — receives a photo you selected, and only when you choose the AI avatar style, in order to return a concealed avatar (see section 4). It also receives the text of any private note you add to a post, in order to sort it by theme and compare it with other notes (see section 1). Your account is not identified in that request.</li>
   <li><strong>Google Cloud Vision</strong> — checks the photo you pick for your avatar (section 4) and screens photos you upload for sexual or violent content.</li>
   <li><strong>Amazon Web Services (Rekognition)</strong> — receives your sign-up selfies and avatar photo for the one-time check described in section 5. Nothing is kept.</li>
   <li><strong>Spotify</strong> — when you type in the "Listening to?" field, the text you type is sent through our server to Spotify's public song search. Your account is not identified in that request.</li>
