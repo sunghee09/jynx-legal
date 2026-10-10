@@ -43,12 +43,13 @@
   <li><strong>Timestamps</strong> — when posts, messages, and activity updates are created, so the app can show what is recent.</li>
   <li><strong>Usage data</strong> — how the app is used, collected with Google Analytics for Firebase: which screens are opened, which sign-up steps are completed, and counts such as posts created, likes, follows, and messages sent, along with basic device information (device model, operating system and app version) and an approximate region that Google works out from your IP address. It never includes your name, what you post or write, your messages, or the places and songs you attach. It is linked to a random identifier for your app installation, not to your account, and we do not use your device's advertising identifier.</li>
 </ul>
-<p><strong>Your location is used only when you ask for it, and we never store it.</strong> Location access is optional, and MiRRA works without it. If you allow it, the app reads your phone's position in two situations only:</p>
+<p><strong>Your location is used only in the situations below, and is never shown to anyone.</strong> Location access is optional, and MiRRA works without it. If you allow it, the app reads your phone's position in three situations only:</p>
 <ul>
   <li><strong>While you fill in the "Where?" field of a post</strong> — to list the places nearest you and to sort place searches by nearness. Your position is sent with that request to the OpenStreetMap search described in section 6.</li>
-  <li><strong>When you tap "I'm open" on a match with someone at the same place</strong> — to confirm that you are at that place right now. Your position is sent to our server for that one comparison.</li>
+  <li><strong>When you add a private note to a post</strong> — your position, rounded to about 100 metres, is sent with the note so that two people asking for company in the same spot can be matched. If the note is not about wanting company, the position is discarded straight away. If it is, the rounded position is kept privately on our servers only while the note can still match someone: at most three hours, and it is erased sooner if you tap "I've left" or delete the post.</li>
+  <li><strong>When you tap "I'm open" on a match with someone at the same place</strong> — to confirm that you are there right now. Your position is sent to our server for that comparison. If the other person has not answered yet, it is kept for up to 30 minutes so the two can be compared, then erased.</li>
 </ul>
-<p>In both cases your position is not saved, is not shown to other users, and is not used to show you who is nearby. MiRRA never reads your location in the background. A place attached to a post is always one you typed or picked yourself. We do not use crash-reporting services, and we do not track you across other apps or websites.</p>
+<p>Apart from what is described above, your position is not saved. It is never shown to other users and is never used to show you who is nearby. MiRRA never reads your location in the background. A place attached to a post is always one you typed or picked yourself. We do not use crash-reporting services, and we do not track you across other apps or websites.</p>
 
 <h2>3. How We Use Your Information</h2>
 <ul>
