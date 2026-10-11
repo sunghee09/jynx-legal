@@ -20,7 +20,7 @@
 <div class="nav"><a href="index.html">← MiRRA Legal</a></div>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 10, 2026</p>
+<p class="meta">Last updated: October 11, 2026</p>
 
 <p>MiRRA ("we", "us") is a social discovery app that connects people through shared real-time activities. This policy explains what we collect, why, and what control you have. MiRRA is available to users aged 18 and over only.</p>
 
@@ -32,7 +32,7 @@
   <li><strong>Onboarding responses</strong> — personality type (MBTI) or vibe slider answers, selected interests, and character identity selections. Some of these are private preference signals used for matching and are never displayed on your public profile.</li>
   <li><strong>Content you post</strong> — activity status, captions, photos, and any place or music details you choose to attach to a post.</li>
   <li><strong>Private notes on a post</strong> — a short note you can choose to add to a post. It is never shown to other users. We store it with your post, and to check whether someone else wrote something similar around the same time, its text is sent through our server to Google's Gemini API, which sorts it by theme (for example a feeling, or wanting company) and may compare it with another person's note. If your note matches someone else's, you each see a card saying that someone wrote something similar — and, for a note about wanting company, that they are at the same place you picked for your post. Neither of you is named, and neither of you sees the other's words, unless you both choose to connect; then you each see the other's name. A note can say sensitive things about you, so add one only if you are comfortable with it being processed this way.</li>
-  <li><strong>Places you post from</strong> — when you attach a place to a post, we save that place to a private list on your account so it can appear as a shortcut and so you can be notified about meet-ups there. This list is visible only to you, and you can delete any entry from within the app.</li>
+  <li><strong>Places you post from</strong> — when you attach a place to a post, we save that place to a private list on your account so it can appear as a shortcut and so you can be notified about meet-ups there. This list is visible only to you, and you can delete any entry from within the app. The exact place name is shown on a post only while the post is live. Once the post is over, we erase the place’s name and its map identifier from the post and from your profile, and keep only its district and city. A place you typed yourself, rather than picked from the list, is also kept as a simplified form of those words, which the app uses to group posts by place.</li>
   <li><strong>Direct messages</strong> — the content of messages you send to other users.</li>
 </ul>
 
@@ -47,7 +47,7 @@
 <ul>
   <li><strong>While you fill in the "Where?" field of a post</strong> — to list the places nearest you and to sort place searches by nearness. Your position is sent with that request to the OpenStreetMap search described in section 6.</li>
   <li><strong>When you add a private note to a post</strong> — your position, rounded to about 100 metres, is sent with the note so that two people asking for company in the same spot can be matched. If the note is not about wanting company, the position is discarded straight away. If it is, the rounded position is kept privately on our servers only while the note can still match someone: at most three hours, and it is erased sooner if you tap "I've left" or delete the post.</li>
-  <li><strong>When you tap "I'm open" on a match with someone at the same place</strong> — to confirm that you are there right now. Your position is sent to our server for that comparison. If the other person has not answered yet, it is kept for up to 30 minutes so the two can be compared, then erased.</li>
+  <li><strong>When you tap "I'm open" on a match with someone at the same place</strong> — to confirm that you are there right now. Your position is sent to our server for that comparison. If the other person has not answered yet, it is kept privately on our servers until the match ends — at most about three and a half hours — so the two can be compared, and it is erased sooner if you tap "I’ve left" or delete the post.</li>
 </ul>
 <p>Apart from what is described above, your position is not saved. It is never shown to other users and is never used to show you who is nearby. MiRRA never reads your location in the background. A place attached to a post is always one you typed or picked yourself. We do not use crash-reporting services, and we do not track you across other apps or websites.</p>
 
@@ -89,6 +89,9 @@
   <li><strong>Apple (iTunes Search API)</strong> — used as a backup song search, and to play short song previews. The text you type or the song you pick is sent to Apple's public search. Your account is not identified in that request.</li>
   <li><strong>OpenStreetMap search (Photon, run by komoot, and Nominatim, run by the OpenStreetMap Foundation)</strong> — when you type in the "Where?" field, the text you type is sent to find matching places, and when you pick a place, its map position is sent once to find its neighbourhood. If you have allowed location access, your phone's position is sent with those searches so the nearest places come first. When a private note about wanting company is matched, our server also looks up where the place you picked is (the place's position, not yours). Your account is not identified in those requests.</li>
   <li><strong>Wikimedia (Wikidata)</strong> — when you type in the subject field of a post, or search while picking your interests, the text you type is sent to Wikimedia's public search so we can offer matching topics. Your account is not identified in that request.</li>
+  <li><strong>Open Library (Internet Archive)</strong> — when a book you posted about is shown on a profile, its title is sent to Open Library’s public search to find a cover image. Your account is not identified in that request.</li>
+  <li><strong>Google Gmail</strong> — when a report, an automatic hide or a sign-up check needs a person to look, an alert email is sent to us. It can contain the account’s name and ID, a short excerpt of the post and, for a sign-up check, the age you stated, the estimated age range and the face-match result. It never contains an image.</li>
+  <li><strong>Firebase App Check (Google Play Integrity, Apple DeviceCheck)</strong> — proves to our servers that a request comes from the genuine app. It sends signals about the app and the device to Google; it is not linked to your profile.</li>
 </ul>
 <p>We do not sell your personal information. We do not share your personal information with advertisers.</p>
 
@@ -102,7 +105,7 @@
 </ul>
 
 <h2>8. Data Retention</h2>
-<p>We keep your information for as long as your account is active. Sign-up selfies are never kept; only the check result is, for as long as your account exists. If you delete your account, we delete your profile, posts, and uploaded images. Messages you have sent may remain visible to their recipients. Backup copies and records required for legal, security, or abuse-prevention purposes may be retained for a limited period after deletion.</p>
+<p>We keep your information for as long as your account is active. Sign-up selfies are never kept; only the check result is, for as long as your account exists. If you delete your account, we delete your profile, posts, uploaded images, any AI-styled avatars, and the result of your sign-up check. Photos on a post are also deleted when you delete that post. Messages you have sent may remain visible to their recipients. Backup copies and records required for legal, security, or abuse-prevention purposes may be retained for a limited period after deletion.</p>
 
 <h2>9. Your Rights and Choices</h2>
 <ul>
@@ -110,7 +113,7 @@
   <li><strong>Deletion</strong> — you can permanently delete your account from Settings. This action cannot be undone.</li>
   <li><strong>Saved places</strong> — you can delete any saved place from within the app.</li>
   <li><strong>Notifications</strong> — you can turn off notifications in the app or your device settings.</li>
-  <li><strong>Blocking</strong> — you can block any user, which prevents them from seeing your posts or contacting you.</li>
+  <li><strong>Blocking</strong> — you can block any user, which prevents them from seeing your posts in the app or contacting you.</li>
 </ul>
 <p>If you are in the European Economic Area or the United Kingdom, you have additional rights under the GDPR, including the right to access, correct, delete, restrict processing of, or port your data, and the right to object to processing. If you are a California resident, you have rights under the CCPA including the right to know what personal information we collect and the right to request its deletion. To exercise any of these rights, contact us at the address below.</p>
 
